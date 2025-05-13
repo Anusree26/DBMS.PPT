@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Hive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #6a00ff;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      color: white;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      padding: 0.5rem 1rem;
+      background: #6a00ff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero-content {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      margin-top: 2rem;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .search-bar select,
+    .search-bar input {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      min-width: 120px;
+    }
+
+    .search-btn {
+      background: #6a00ff;
+      border: none;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-info {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .view-more,
+    .create-btn {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background: #6a00ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .create-event {
+      background: #2e0b73;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .brands {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .brand-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .brand-logos img {
+      width: 100px;
+      height: auto;
+    }
+
+    .footer {
+      background: #0d0628;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Event <span class="highlight">Hive</span></div>
+      <button class="login-btn">Login</button>
+    </nav>
+    <div class="hero-content">
+      <h1>MADE FOR THOSE WHO DO</h1>
+      <div class="search-bar">
+        <select><option>Category</option></select>
+        <select><option>Location</option></select>
+        <select><option>Date</option></select>
+        <input type="text" placeholder="Search..." />
+        <button class="search-btn">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section events">
+    <h2>Upcoming <span class="highlight">Events</span></h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="event">
+        <div class="card-info">
+          <h3>Live Music Festival</h3>
+          <p>May 2, New York</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="event">
+        <div class="card-info">
+          <h3>Food Carnival</h3>
+          <p>May 3, Chicago</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="event">
+        <div class="card-info">
+          <h3>Tech Expo 2025</h3>
+          <p>May 5, San Francisco</p>
+        </div>
+      </div>
+    </div>
+    <button class="view-more">View More</button>
+  </section>
+
+  <section class="create-event">
+    <div class="create-text">
+      <h2>Make your own Event</h2>
+      <p>Create events effortlessly and engage audiences.</p>
+      <button class="create-btn">Create Event</button>
+    </div>
+  </section>
+
+  <section class="brands">
+    <h3>Join these brands</h3>
+    <div class="brand-logos">
+      <img src="https://via.placeholder.com/100x50" alt="Spotify">
+      <img src="https://via.placeholder.com/100x50" alt="Google">
+      <img src="https://via.placeholder.com/100x50" alt="YouTube">
+      <img src="https://via.placeholder.com/100x50" alt="Uber">
+      <img src="https://via.placeholder.com/100x50" alt="Microsoft">
+    </div>
+  </section>
+
+  <section class="section colleges">
+    <h2>Trending <span class="highlight">colleges</span></h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="college">
+        <div class="card-info">
+          <h3>Harvard University</h3>
+          <p>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="college">
+        <div class="card-info">
+          <h3>Stanford University</h3>
+          <p>California, US</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="college">
+        <div class="card-info">
+          <h3>Nanyang University</h3>
+          <p>Singapore</p>
+        </div>
+      </div>
+    </div>
+    <button class="view-more">View More</button>
+  </section>
+
+  <section class="section blogs">
+    <h2>Our <span class="highlight">Blogs</span></h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="blog">
+        <div class="card-info">
+          <h3>How to host events</h3>
+          <p>Tips & tricks for beginners</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="blog">
+        <div class="card-info">
+          <h3>Boost Event Engagement</h3>
+          <p>Strategies to grow audience</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="blog">
+        <div class="card-info">
+          <h3>Choosing the right venue</h3>
+          <p>Plan with confidence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">Event <span class="highlight">Hive</span></div>
+      <p>© 2025 All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>
